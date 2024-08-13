@@ -1,0 +1,38 @@
+ {
+  "resourceType": "Bundle",
+  "id": "a8a51340-d761-46d3-ab66-ad5bf5bd397c",
+  "meta": {
+    "lastUpdated": "2023-03-09T10:58:13.866+05:30",
+    "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-CommunicationBundle.html" ]
+  },
+  "identifier": {
+    "system": "https://www.tmh.in/bundle",
+    "value": "dc045a1b-7c07-461c-8174-f741b3f2a986"
+  },
+  "type": "collection",
+  "timestamp": "2023-03-09T10:58:13.866+05:30",
+  "entry": [ {
+    "fullUrl": "Communication/6831e0a6-518c-4865-a81f-8501026711fb",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "6831e0a6-518c-4865-a81f-8501026711fb",
+      "meta": {
+        "lastUpdated": "2023-03-09T10:58:13.672+05:30",
+        "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-Communication.html" ]
+      },
+      "identifier": [ {
+        "system": "http://www.providerco.com/communication",
+        "value": "12345"
+      } ],
+      "status": "completed",
+      "payload": [ {
+        "contentAttachment": {
+          "contentType": "application/pdf",
+          "data": "YWJjZA==",
+          "title": "accident_notes.pdf",
+          "creation": "2023-03-09T10:58:13+05:30"
+        }
+      } ]
+    }
+  }]
+}

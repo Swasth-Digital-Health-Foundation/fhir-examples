@@ -1,0 +1,141 @@
+{
+  "resourceType": "Bundle",
+  "id": "a1b5f8ee-735e-466e-8792-2e7199087441",
+  "meta": {
+    "lastUpdated": "2023-02-12T11:33:57.890+05:30",
+    "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-CoverageEligibilityResponseBundle.html" ]
+  },
+  "identifier": {
+    "system": "https://www.tmh.in/bundle",
+    "value": "c17d96f8-bb43-4136-8752-e6b07d340b53"
+  },
+  "type": "collection",
+  "timestamp": "2023-02-12T11:33:57.890+05:30",
+  "entry": [ {
+    "fullUrl": "CoverageEligibilityResponse/cb00ea2f-7ad2-4812-9ae4-5e5621f5c167",
+    "resource": {
+      "resourceType": "CoverageEligibilityResponse",
+      "id": "cb00ea2f-7ad2-4812-9ae4-5e5621f5c167",
+      "meta": {
+        "lastUpdated": "2023-02-12T11:33:57.602+05:30",
+        "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-CoverageEligibilityResponse.html" ]
+      },
+      "identifier": [ {
+        "system": "http://identifiersystem.com",
+        "value": "IdentifierValue"
+      } ],
+      "status": "active",
+      "purpose": [ "benefits" ],
+      "patient": {
+        "reference": "Patient/RVH1003"
+      },
+      "created": "2023-02-12T11:33:57+05:30",
+      "requestor": {
+        "reference": "Organization/Tmh01"
+      },
+      "request": {
+        "reference": "CoverageEligibilityRequest/dc82673b-8c71-48c2-8a17-16dcb3b035f6"
+      },
+      "outcome": "complete",
+      "insurer": {
+        "reference": "Organization/GICOFINDIA"
+      }
+    }
+  }, {
+    "fullUrl": "Organization/Tmh01",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "Tmh01",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AC",
+            "display": "Narayana"
+          } ]
+        },
+        "system": "http://abdm.gov.in/facilities",
+        "value": "HFR-ID-FOR-TMH"
+      } ],
+      "name": "Tata Memorial Hospital"
+    }
+  }, {
+    "fullUrl": "Organization/GICOFINDIA",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "GICOFINDIA",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AC",
+            "display": "GOVOFINDIA"
+          } ]
+        },
+        "system": "http://irdai.gov.in/insurers",
+        "value": "GICOFINDIA"
+      } ],
+      "name": "GICOFINDIA"
+    }
+  }, {
+    "fullUrl": "Patient/RVH1003",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "RVH1003",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "SN",
+            "display": "Subscriber Number"
+          } ]
+        },
+        "system": "http://gicofIndia.com/beneficiaries",
+        "value": "BEN-101"
+      } ],
+      "name": [ {
+        "text": "Hina Patel"
+      } ],
+      "gender": "female"
+    }
+  }, {
+    "fullUrl": "Coverage/COVERAGE1",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "COVERAGE1",
+      "meta": {
+        "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-Coverage.html" ]
+      },
+      "identifier": [ {
+        "system": "https://www.gicofIndia.in/policies",
+        "value": "policy-RVH1003"
+      } ],
+      "status": "active",
+      "subscriber": {
+        "reference": "Patient/RVH1003"
+      },
+      "subscriberId": "SN-RVH1003",
+      "beneficiary": {
+        "reference": "Patient/RVH1003"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/GICOFINDIA"
+      } ]
+    }
+  } ]
+}

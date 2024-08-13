@@ -1,0 +1,181 @@
+{
+  "resourceType": "Bundle",
+  "id": "38d07f51-91ee-4753-833a-3e58a34f225c",
+  "meta": {
+    "lastUpdated": "2023-02-17T19:29:49.125+05:30",
+    "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-ClaimResponseBundle.html" ]
+  },
+  "identifier": {
+    "system": "https://www.tmh.in/bundle",
+    "value": "d18fb69d-f6cf-4736-ba3d-3cfb2a9e82b8"
+  },
+  "type": "collection",
+  "timestamp": "2023-02-17T19:29:49.125+05:30",
+  "entry": [ {
+    "fullUrl": "ClaimResponse/881e2973-7885-4d09-8d8e-3f420d338eef",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "881e2973-7885-4d09-8d8e-3f420d338eef",
+      "meta": {
+        "lastUpdated": "2023-02-17T19:29:49.004+05:30",
+        "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-ClaimResponse.html" ]
+      },
+      "identifier": [ {
+        "system": "http://identifiersystem.com",
+        "value": "08148182-ed74-4294-93ce-80e95393cd6f"
+      } ],
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/RVH1003"
+      },
+      "created": "2023-02-17T19:29:49+05:30",
+      "insurer": {
+        "reference": "Organization/GICOFINDIA"
+      },
+      "requestor": {
+        "reference": "Organization/WeMeanWell01"
+      },
+      "request": {
+        "reference": "Claim/CLAIM1"
+      },
+      "outcome": "error",
+      "total": [ {
+        "category": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/adjudication",
+            "code": "benefit"
+          } ]
+        },
+        "amount": {
+          "value": 80000,
+          "currency": "INR"
+        }
+      } ],
+      "error": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://hcxprotocol.io/codes/claim-error-codes",
+            "code": "AUTH-005",
+            "display": "\tClaim information is inconsistent with pre-certified/authorized services"
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "fullUrl": "Organization/WeMeanWell01",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "WeMeanWell01",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AC",
+            "display": "Narayana"
+          } ]
+        },
+        "system": "http://abdm.gov.in/facilities",
+        "value": "HFR-ID-FOR-TMH"
+      } ],
+      "name": "WeMeanWell Hospital",
+      "address": [ {
+        "text": " Bannerghatta Road, Bengaluru ",
+        "city": "Bengaluru",
+        "country": "India"
+      } ]
+    }
+  }, {
+    "fullUrl": "Organization/GICOFINDIA",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "GICOFINDIA",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Organization" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "AC",
+            "display": "GOVOFINDIA"
+          } ]
+        },
+        "system": "http://irdai.gov.in/insurers",
+        "value": "GICOFINDIA"
+      } ],
+      "name": "GICOFINDIA"
+    }
+  }, {
+    "fullUrl": "Patient/RVH1003",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "RVH1003",
+      "meta": {
+        "profile": [ "https://nrces.in/ndhm/fhir/r4/StructureDefinition/Patient" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "SN",
+            "display": "Subscriber Number"
+          } ]
+        },
+        "system": "http://gicofIndia.com/beneficiaries",
+        "value": "BEN-101"
+      } ],
+      "name": [ {
+        "text": "Prasidh Dixit"
+      } ],
+      "gender": "male",
+      "birthDate": "1960-09-26",
+      "address": [ {
+        "text": "#39 Kalena Agrahara, Kamanahalli, Bengaluru - 560056",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postalCode": "560056",
+        "country": "India"
+      } ]
+    }
+  }, {
+    "fullUrl": "Coverage/COVERAGE1",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "COVERAGE1",
+      "meta": {
+        "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-Coverage.html" ]
+      },
+      "identifier": [ {
+        "system": "https://www.gicofIndia.in/policies",
+        "value": "policy-RVH1003"
+      } ],
+      "status": "active",
+      "subscriber": {
+        "reference": "Patient/RVH1003"
+      },
+      "subscriberId": "2XX8971",
+      "beneficiary": {
+        "reference": "Patient/RVH1003"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+          "code": "self"
+        } ]
+      },
+      "payor": [ {
+        "reference": "Organization/GICOFINDIA"
+      } ]
+    }
+  } ]
+}

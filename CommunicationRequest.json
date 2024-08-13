@@ -1,0 +1,19 @@
+{
+  "resourceType": "CommunicationRequest",
+  "id": "d35136a5-9fc3-4610-9911-2ada4ce41b8e",
+  "meta": {
+    "lastUpdated": "2023-03-09T10:58:15.291+05:30",
+    "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-CommunicationRequest.html" ]
+  },
+  "identifier": [ {
+    "system": "http://irdai.gov.in/insurer/123456",
+    "value": "ABCD123"
+  } ],
+  "basedOn": [ {
+    "reference": "Patient/RVH1003"
+  } ],
+  "status": "active",
+  "payload": [ {
+    "contentString": "Please provide the accident report and any associated pictures to support your Claim# DEF5647."
+  } ]
+}

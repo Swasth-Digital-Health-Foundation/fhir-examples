@@ -1,0 +1,143 @@
+{
+  "resourceType": "InsurancePlan",
+  "id": "ae7bb808-c60b-4d8d-9a88-1ff0fd2f167e",
+  "meta": {
+    "profile": [ "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXInsurancePlan.html"]
+  },
+  "identifier": [ {
+    "value": "AB_GUJ_Plan1"
+  } ],
+  "status": "active",
+  "type": [ {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/insurance-plan-type",
+      "code": "medical"
+    } ]
+  } ],
+  "name": "PMJAY-Mukhyamantri Amrutam & Mukhyamantri Vatsalya",
+  "plan": [ {
+    "id": "1ece2515-00af-4a3d-8957-340f16e0897d",
+    "extension": [ {
+      "url": "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXProofOfIdentificationExtension.html",
+      "extension": [ {
+        "url": "ProofOfIdentificationDocumentCode",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "https://hcx-valuesets/proofOfIdentificationDocumentCodes",
+            "version": "1.0.0",
+            "code": "12345",
+            "display": "Aadhar Card"
+          } ]
+        }
+      }, {
+        "url": "ClinicalDiagnosticDocumentClaimUse",
+        "valueCode": "preauthorization"
+      }, {
+        "url": "DocumentationUrl",
+        "valueUrl": "http://documentation-url"
+      } ]
+    }, {
+      "url": "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXProofOfPresenceExtension.html",
+      "extension": [ {
+        "url": "ProofOfPresenceDocumentCode",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "https://hcx-valuesets/proofOfPresenceDocumentCodes",
+            "version": "1.0.0",
+            "code": "12345",
+            "display": "Aadhar Verification XML"
+          } ]
+        }
+      }, {
+        "url": "ClinicalDiagnosticDocumentClaimUse",
+        "valueCode": "preauthorization"
+      }, {
+        "url": "DocumentationUrl",
+        "valueUrl": "http://documentation-url"
+      } ]
+    } ],
+    "type": {
+      "coding": [ {
+        "system": "http://terminologyServer/ValueSets/plan-type",
+        "code": "PMJAY_GUJ_GOLD_CARD"
+      } ]
+    },
+    "specificCost": [ {
+      "category": {
+        "coding": [ {
+          "system": "http://terminologyServer/ValueSets/cost-category",
+          "code": "Inpatient-packages"
+        } ]
+      },
+      "benefit": [ {
+        "extension": [ {
+          "url": "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXDiagnosticDocumentsExtension.html",
+          "extension": [ {
+            "url": "ClinicalDiagnosticDocumentCode",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://hcx-valuesets/proofOfIdentificationDocumentCodes",
+                "version": "1.0.0",
+                "code": "MAND0001",
+                "display": "Post Treatment clinical photograph"
+              } ]
+            }
+          }, {
+            "url": "ClinicalDiagnosticDocumentClaimUse",
+            "valueCode": "claim"
+          }, {
+            "url": "DocumentationUrl",
+            "valueUrl": "http://documentation-url"
+          } ]
+        }, {
+          "url": "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXInformationalMessagesExtension.html",
+          "extension": [ {
+            "url": "InformationalMessagesCode",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "https://hcx-valuesets/InformationalMessagesCodes",
+                "version": "1.0.0",
+                "code": "12343",
+                "display": "Information Message 1"
+              } ]
+            }
+          }, {
+            "url": "InformationalMessageClaimUse",
+            "valueCode": "claim"
+          }, {
+            "url": "DocumentationUrl",
+            "valueUrl": "http://documntation-url"
+          } ]
+        }, {
+          "url": "https://ig.hcxprotocol.io/v0.7.1/StructureDefinition-HCXQuestionnairesExtension.html",
+          "extension": [ {
+            "url": "Questionnaire",
+            "valueReference": {
+              "reference": "Questionnnaire/1"
+            }
+          }, {
+            "url": "QuestionnaireClaimUse",
+            "valueCode": "claim"
+          }, {
+            "url": "DocumentationUrl",
+            "valueUrl": "http://documentation-url"
+          } ]
+        } ],
+        "type": {
+          "coding": [ {
+            "system": "http://terminologyServer/ValueSets/packages",
+            "code": "HBP_PACKAGE_00003"
+          } ]
+        },
+        "cost": [ {
+          "type": {
+            "coding": [ {
+              "system": "http://terminologyServer/ValueSets/pacakgeCostTypes",
+              "code": "hospitalization"
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  } ]
+}
